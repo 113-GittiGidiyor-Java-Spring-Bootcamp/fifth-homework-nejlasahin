@@ -25,7 +25,6 @@ class CourseControllerTest {
         expected.setCourseCode("JV121");
         when(courseService.save(any())).thenReturn(expected);
 
-        CourseDto course = new CourseDto();
         CourseDto actual = this.courseController.save(course).getBody();
 
         assertAll(
@@ -37,22 +36,7 @@ class CourseControllerTest {
 
     @Test
     void deleteSuccessfully(){
-        CourseDto expected = new CourseDto();
-        expected.setCourseCode("JV121");
-        when(courseService.save(any())).thenReturn(expected);
-
-        CourseDto course = new CourseDto();
-        CourseDto actual = this.courseController.save(course).getBody();
-
-        assertAll(
-                () -> assertNotNull(actual),
-                () -> assertEquals(expected.getCourseCode(), actual.getCourseCode()),
-                () -> assertEquals(expected, actual)
-        );
-    }
-
-    @Test
-    void saveException(){
 
     }
+
 }
