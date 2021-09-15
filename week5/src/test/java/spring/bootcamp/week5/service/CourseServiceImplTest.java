@@ -8,7 +8,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import spring.bootcamp.week5.dto.CourseDto;
 import spring.bootcamp.week5.mapper.CourseMapper;
 import spring.bootcamp.week5.model.Course;
-import spring.bootcamp.week5.model.Instructor;
 import spring.bootcamp.week5.repository.CourseRepository;
 import spring.bootcamp.week5.service.impl.CourseServiceImpl;
 

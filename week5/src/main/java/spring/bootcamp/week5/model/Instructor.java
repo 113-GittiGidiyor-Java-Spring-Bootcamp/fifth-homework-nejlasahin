@@ -60,4 +60,12 @@ public class Instructor extends BaseEntity {
     // The course of this Instructor.
     @OneToMany(mappedBy = "instructor")
     private Set<Course> courses = new HashSet<>();
+
+    public Instructor(long id, InstructorType type, String fullName, String address, String phoneNumber) {
+        this.id = id;
+        this.type = type;
+        this.fullName = fullName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+    }
 }

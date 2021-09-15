@@ -26,4 +26,12 @@ public class StudentDto {
     private int age;
 
     private Set<CourseDto> courses = new HashSet<>();
+
+    public StudentDto(long id, String fullName, String address, Gender gender, int age) {
+        this.id = id;
+        this.fullName = fullName;
+        this.address = address;
+        this.gender = gender;
+        this.age = age;
+    }
 }

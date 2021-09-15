@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import spring.bootcamp.week5.dto.InstructorDto;
+import spring.bootcamp.week5.enums.TransactionType;
 import spring.bootcamp.week5.service.InstructorService;
 
 import javax.validation.Valid;
@@ -18,6 +19,12 @@ public class InstructorController {
     @Autowired
     public InstructorController(InstructorService instructorService) {
         this.instructorService = instructorService;
+    }
+
+    @PutMapping("/{id}/{transactionType}/{rate}")
+    public ResponseEntity<?> salaryTransaction(@PathVariable long id, @PathVariable TransactionType transactionType, @PathVariable double rate){
+        instructorService.salaryTransaction(id, transactionType, rate);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping

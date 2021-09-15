@@ -44,7 +44,7 @@ public class CourseController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CourseDto>> findAll(){
+    public ResponseEntity<List<CourseDto>> findAll(List<CourseDto> courseDtoList){
         List<CourseDto> courses = courseService.findAll();
         return new ResponseEntity<>(courses, HttpStatus.OK);
     }

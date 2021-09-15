@@ -58,4 +58,12 @@ public class Student extends BaseEntity {
             inverseForeignKey = @ForeignKey(name = "fk_student")
     )
     private Set<Course> courses = new HashSet<>();
+
+    public Student(long id, String fullName, String address, Gender gender, int age) {
+        this.id = id;
+        this.fullName = fullName;
+        this.address = address;
+        this.gender = gender;
+        this.age = age;
+    }
 }
